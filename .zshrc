@@ -16,6 +16,9 @@ setopt histignorealldups sharehistory
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
+bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
+
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
@@ -44,6 +47,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+alias ls='ls --color'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

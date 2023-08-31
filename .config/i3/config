@@ -59,7 +59,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 #bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
+#bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
+bindsym $mod+d exec --no-startup-id rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -130,7 +131,7 @@ set $ws1 "1:   Terminal"
 set $ws2 "2:   Program"
 set $ws3 "3: 󰇧  Browser"
 set $ws4 "4: 󰉋  File System"
-set $ws5 "5:   Game"
+set $ws5 "5: 󰊖  Game"
 set $ws6 "6: 󰒓  Background"
 set $ws7 "7: 󰋩  Desktop"
 set $ws8 "8"
