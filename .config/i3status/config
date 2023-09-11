@@ -25,41 +25,44 @@ order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: %essid : %quality : %ip"
-        format_down = "W: Off"
+        format_up = "   %essid%quality"
+        format_down = "   Off"
 }
 
 ethernet _first_ {
         #format_up = "IP: %ip"
-	format_up = "E: Up"
-        format_down = "E: down"
+	format_up = "󰈁  Up"
+        format_down = "󰈂  down"
 }
 
 battery all {
-        format = "B: %percentage"
+        format = "%status  %percentage"
+	status_chr = "󰢝"
+	status_bat = "󰁾"
+	status_full = "󰁹"
 }
 
 disk "/" {
-        format = "Disk: %avail / %total"
+        format = "󰋊  %avail / %total"
 }
 
 cpu_usage {
-        format = "CPU: %cpu0"
+        format = "   %cpu0"
 }
 
 cpu_temperature 0 {
-	format = "CPU T: %degrees°C"
+	format = "󰈸  %degrees°C"
 }
 
 memory {
-        format = "RAM: %used / %total"
+        format = "   %used / %total"
         threshold_degraded = "1G"
         #format_degraded = "MEMORY < %available"
 }
 
 volume master {
-	format = "V: %volume"
-	format_muted = "V: M (%volume)"
+	format = "󰕾  %volume"
+	format_muted = "󰝟  %volume"
 }
 
 tztime local {
